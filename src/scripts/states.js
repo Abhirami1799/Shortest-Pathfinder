@@ -20,7 +20,7 @@ const states = Object.freeze({
   admissibleValueDisplay: $("#admissibleValueDisplay"),
   DEFAULT_RUNNER_CODE: "bfs",
   MAX_END_NODE_COUNT: 3,
-  MAX_FIXED_FRAME_COUNT: 400,
+  MAX_FIXED_FRAME_COUNT: 2000,
   DEFAULT_BOX_SIZE: window.innerWidth > 600 ? 30 : 30,
   COLORS: Object.freeze({
     BOX_BORDER_COLOR: "#000000",
@@ -50,7 +50,6 @@ const states = Object.freeze({
     Fast: 0,
     Medium: 128,
     Slow: 512,
-    Step: null
   }),
   Runners: Object.freeze({
     dfs: DfsRunner,

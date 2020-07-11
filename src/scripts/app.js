@@ -44,7 +44,6 @@ function init() {
   states.columnCountInput.val(columnCount);
   states.boxSizeInput.val(boxSize);
   states.resetGraphBtn.prop("disabled", true);
-  states.nextStepBtn.hide();
   states.admissibleValue.val(states.Context.AdmissibleValue);
   states.admissibleValueDisplay.text(states.Context.AdmissibleValue);
 

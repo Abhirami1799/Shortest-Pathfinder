@@ -1,4 +1,3 @@
-// Runners
 class Runner {
   constructor(name) {
     this.name = name;

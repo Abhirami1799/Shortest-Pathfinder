@@ -1,8 +1,8 @@
 class Box extends GraphNode {
   constructor(value, id) {
     super(value, id);
-    this.pointTL = null;
-    this.pointBR = null;
+    this.pointstart = null;
+    this.pointend = null;
     this.nodeType = states.BOX_TYPES.CLEAR;
     this.__path = null;
     this.__centerText = null;
@@ -40,7 +40,7 @@ class Box extends GraphNode {
         stops: states.COLORS.BOX_TYPE_END_NODE_COLORS
       },
       origin: this.path.bounds.topLeft,
-      destination: this.path.bounds.rightCenter
+      destination: this.path.bounds.bottomRight
     };
   }
 
@@ -111,15 +111,15 @@ class Box extends GraphNode {
     }
   }
 
-  setPoints(pointTL, pointBR) {
-    this.pointTL = pointTL;
-    this.pointBR = pointBR;
+  setPoints(pointstart, pointend) {
+    this.pointstart = pointstart;
+    this.pointend = pointend;
   }
 
   draw() {
     this.__path = new paper.Path.Rectangle({
-      from: this.pointTL,
-      to: this.pointBR,
+      from: this.pointstart,
+      to: this.pointend,
       strokeColor: states.COLORS.BOX_BORDER_COLOR,
       strokeWidth: 0.9,
       fillColor: states.COLORS.BOX_TYPE_CLEAR_COLOR
